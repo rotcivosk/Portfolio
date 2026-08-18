@@ -6,6 +6,12 @@
         <title>Victor Barboza do Monte</title>
         
         <link rel="stylesheet" href="style.css">
+
+        <!-- Bootstrap Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        >
     </head>
 
     <body>
@@ -69,21 +75,84 @@
                         <h2>Data Engineering</h2>
                         <p>Building reliable data pipelines and platforms</p>
                     </div>
+                    <div class="data-cards">
+                        <!--ETL-->
+                        <article class="data-card">
+                            <div class="data-card-header">
+                                <i class="bi bi-diagram-3 data-card-icon"></i>
+                                <div>
+                                    <h3>ETL Pipelines</h3>
+                                    <span>Ingestion and processing workflows</span>
+                                </div>
+                            </div>
 
-                    <div class="cards">
-                        <article class="card small-card">
-                            <h3>ETL Pipelines</h3>
-                            <span>Data processing workflows</span>
+                            <div class="etl-flow">
+                                <div class="etl-node">
+                                    <i class="bi bi-arrow-right etl-arrow"> </i>
+                                    <span>Data Sources</span>
+                                </div>
+
+                                <i class="bi bi-arrow-right etl-arrow"></i>
+
+                                <div class="etl-node">
+                                    <i class="bi bi-gear"> </i>
+                                    <span>Transform</span>
+                                </div>
+
+                                <i class="bi bi-arrow-right etl-arrow"></i>
+
+                                <div class="etl-node">
+                                    <i class="bi bi-database-check"> </i>
+                                    <span>Load</span>
+                                </div>
+                            </div>
                         </article>
 
-                        <article class="card small-card">
-                            <h3>Data Lake</h3>
-                            <span>Storage and processing</span>
+                        <!-- Data lake  -->
+                        <article class="data-card">
+                            <div class="data-card-header">
+                                <i class="bi bi-layers data-card-icon"></i>
+                                <div>
+                                    <h3>Data Lake Architecture</h3>
+                                    <span>Layered data organization</span>
+                                </div>
+                            </div>
+
+                            <div class="lake-layers">
+                                <div class="lake-layer gold">Gold</div>
+                                <div class="lake-layer silver">Silver</div>
+                                <div class="lake-layer bronze">Bronze</div>
+                                <div class="lake-layer raw">Raw</div>
+                            </div>
                         </article>
 
-                        <article class="card small-card">
-                            <h3>ECG Platform</h3>
-                            <span>Healthcare data platform</span>
+
+                        <!-- Data Quality -->
+                        <article class="data-card">
+                            <div class="data-card-header">
+                                <i class="bi bi-shield-check data-card-icon"></i>
+                                <div>
+                                    <h3>Data Quality</h3>
+                                    <span>Validation and monitoring</span>
+                                </div>
+                            </div>
+
+                            <div class="quality-list">
+                                <div class="quality-item valid">
+                                    <i class="bi bi-check-circle"></i>
+                                    <span>Valid</span>
+                                </div>
+
+                                <div class="quality-item warning">
+                                    <i class="bi bi-exclamation-triangle"></i>
+                                    <span>Invalid</span>
+                                </div>
+
+                                <div class="quality-item error">
+                                    <i class="bi bi-x-circle"></i>
+                                    <span>Error</span>
+                                </div>
+                            </div>
                         </article>
                     </div>
                 </div>
@@ -145,7 +214,7 @@
             <section class="profile" data-target="profile">
 
                 <img
-                    src="assets/foto.jpg"
+                    src="assets/foto.png"
                     alt="Victor Barboza do Monte"
                     class="profile-photo"
                 >

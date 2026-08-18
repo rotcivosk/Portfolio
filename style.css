@@ -313,6 +313,210 @@ body {
 .carousel-button:hover {
     transform: scale(1.15);
 }
+
+/* =========================
+   DATA ENGINEERING
+   ========================= */
+
+.data-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+
+/* CARD */
+
+.data-card {
+    padding: 18px;
+
+    border: 1px solid #e2e5ea;
+    border-radius: 12px;
+
+    background: white;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+.data-card-header {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+.data-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 38px;
+    height: 38px;
+
+    border-radius: 8px;
+
+    background: #edf7f1;
+    color: #287a4b;
+
+    font-size: 20px;
+}
+
+
+.data-card h3 {
+    margin: 0 0 4px;
+
+    font-size: 17px;
+}
+
+
+.data-card-header span {
+    font-size: 13px;
+
+    color: #667085;
+}
+
+
+/* =========================
+   ETL
+   ========================= */
+
+.etl-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+}
+
+
+.etl-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 10px 8px;
+
+    border: 1px solid #d9e6df;
+    border-radius: 8px;
+
+    background: #f7fbf8;
+
+    font-size: 12px;
+}
+
+
+.etl-node i {
+    font-size: 21px;
+
+    color: #287a4b;
+}
+
+
+.etl-arrow {
+    color: #667085;
+}
+
+
+/* =========================
+   DATA LAKE
+   ========================= */
+
+.lake-layers {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    width: 85%;
+
+    margin: auto;
+}
+
+
+.lake-layer {
+    padding: 7px;
+
+    border-radius: 6px;
+
+    text-align: center;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    border: 1px solid #d9dde5;
+}
+
+
+.lake-layer.gold {
+    background: #fff3c4;
+}
+
+
+.lake-layer.silver {
+    background: #f0f1f3;
+}
+
+
+.lake-layer.bronze {
+    background: #f5d4b5;
+}
+
+
+.lake-layer.raw {
+    background: #d9eee6;
+}
+
+
+/* =========================
+   DATA QUALITY
+   ========================= */
+
+.quality-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.quality-item {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 8px 10px;
+
+    border: 1px solid #e2e5ea;
+    border-radius: 7px;
+
+    font-size: 13px;
+}
+
+
+.quality-item.valid {
+    color: #287a4b;
+}
+
+
+.quality-item.warning {
+    color: #b7791f;
+}
+
+
+.quality-item.quarantine {
+    color: #b42318;
+}
+
 /* =========================
    TECH STACK
    ========================= */
