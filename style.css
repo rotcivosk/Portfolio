@@ -38,6 +38,7 @@ body {
     padding: 60px;
 
     display: flex;
+    cursor: pointer;
 }
 
 .area-content {
@@ -219,6 +220,16 @@ body {
 
     color: #667085;
 }
+
+
+/* =========================
+    SEÇÕES DE CONTEÚDO
+   ========================= */
+.content-section {
+    min-height: 100vh;
+    padding: 80px;
+}
+
 
 
 /* =========================
