@@ -2304,6 +2304,734 @@ body {
     font-size: 14px;
 }
 
+/* =========================================================
+   PROCESS AUTOMATION - DETAILED SECTION
+   ========================================================= */
+
+.automation-section {
+    padding: clamp(70px, 7vw, 120px);
+
+    background: #fbf9f6;
+
+    color: #172033;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.automation-section-header {
+    max-width: 850px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+
+.automation-section-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #d4772b;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+}
+
+
+.automation-section-header h2 {
+    margin: 0 0 18px;
+
+    font-size: clamp(36px, 4vw, 54px);
+    line-height: 1.1;
+
+    color: #172033;
+}
+
+
+.automation-section-header p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   OVERVIEW
+   ========================= */
+
+.automation-overview {
+    max-width: 1200px;
+
+    margin: 0 auto 90px;
+    padding: 25px 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border: 1px solid #eadfd6;
+    border-radius: 18px;
+
+    background: white;
+
+    box-shadow: 0 10px 35px rgba(80, 55, 35, 0.05);
+}
+
+
+.automation-overview-step {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 8px;
+
+    text-align: center;
+}
+
+
+.automation-overview-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #fff0e4;
+    color: #d4772b;
+
+    font-size: 19px;
+}
+
+
+.automation-overview-step span {
+    color: #475467;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+.automation-overview > i {
+    color: #c2aaa0;
+}
+
+
+/* =========================
+   CASE
+   ========================= */
+
+.automation-case {
+    max-width: 1300px;
+
+    margin: 0 auto 50px;
+    padding: 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        60px
+        minmax(0, 2fr)
+        minmax(230px, 0.8fr);
+
+    gap: 35px;
+
+    border: 1px solid #eadfd6;
+    border-radius: 18px;
+
+    background: white;
+
+    box-shadow: 0 6px 25px rgba(80, 55, 35, 0.04);
+}
+
+
+.automation-case-featured {
+    border-color: #e8b487;
+
+    box-shadow: 0 12px 35px rgba(212, 119, 43, 0.10);
+}
+
+
+/* =========================
+   NUMBER
+   ========================= */
+
+.automation-case-number {
+    color: #baa99c;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.automation-case-header {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.automation-case-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #fff0e4;
+    color: #d4772b;
+
+    font-size: 22px;
+}
+
+
+.automation-case-header span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #d4772b;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+
+.automation-case-header h3 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: clamp(21px, 2vw, 28px);
+}
+
+
+/* =========================
+   DESCRIPTION
+   ========================= */
+
+.automation-case-description {
+    max-width: 780px;
+
+    margin: 0 0 28px;
+
+    color: #667085;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   SIDE COLUMN
+   ========================= */
+
+.automation-case-side {
+    padding-left: 30px;
+
+    border-left: 1px solid #eee5df;
+}
+
+
+.automation-case-side h4 {
+    margin: 0 0 16px;
+
+    color: #344054;
+
+    font-size: 13px;
+}
+
+
+.automation-side-subtitle {
+    margin-top: 25px !important;
+}
+
+
+.automation-case-side ul {
+    margin: 0 0 20px;
+
+    padding-left: 18px;
+
+    color: #667085;
+}
+
+
+.automation-case-side li {
+    margin-bottom: 9px;
+
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+
+/* =========================
+   GENERIC AUTOMATION FLOW
+   ========================= */
+
+.procurement-flow,
+.invoice-flow {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+
+.automation-flow-node {
+    flex: 1;
+
+    min-width: 100px;
+
+    padding: 13px 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 6px;
+
+    border: 1px solid #eadfd6;
+    border-radius: 9px;
+
+    background: #fdf9f6;
+
+    color: #667085;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+.automation-flow-node i {
+    color: #d4772b;
+
+    font-size: 18px;
+}
+
+
+.automation-flow-final {
+    background: #fff0e4;
+    border-color: #efc29c;
+
+    color: #a85619;
+}
+
+
+.procurement-flow > i,
+.invoice-flow > i {
+    color: #c6aaa0;
+}
+
+
+/* =========================
+   PROCUREMENT CAPABILITIES
+   ========================= */
+
+.automation-capabilities {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 8px;
+}
+
+
+.automation-capabilities div {
+    padding: 11px;
+
+    border-radius: 8px;
+
+    background: #faf7f4;
+}
+
+
+.automation-capabilities strong,
+.automation-capabilities span {
+    display: block;
+}
+
+
+.automation-capabilities strong {
+    margin-bottom: 4px;
+
+    color: #475467;
+
+    font-size: 10px;
+}
+
+
+.automation-capabilities span {
+    color: #98a2b3;
+
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+
+/* =========================
+   RULE BOX
+   ========================= */
+
+.automation-rule-box {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 15px;
+
+    border-left: 3px solid #d4772b;
+
+    border-radius: 5px;
+
+    background: #fff8f2;
+}
+
+
+.automation-rule-box > div {
+    color: #d4772b;
+
+    font-size: 20px;
+}
+
+
+.automation-rule-box p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   REPORTING
+   ========================= */
+
+.report-flow {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.report-sources {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.report-sources span {
+    min-width: 100px;
+
+    padding: 7px 10px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    border-radius: 6px;
+
+    background: #faf7f4;
+
+    color: #667085;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+.report-sources i {
+    color: #d4772b;
+}
+
+
+.report-processing,
+.report-output {
+    flex: 1;
+
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    border: 1px solid #eadfd6;
+    border-radius: 10px;
+
+    background: #fdf9f6;
+}
+
+
+.report-output {
+    background: #fff0e4;
+}
+
+
+.report-processing > i,
+.report-output > i {
+    color: #d4772b;
+
+    font-size: 24px;
+}
+
+
+.report-processing span,
+.report-output span {
+    color: #475467;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+.report-processing small,
+.report-output small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #98a2b3;
+
+    font-size: 8px;
+    font-weight: 500;
+}
+
+
+.report-arrow {
+    color: #c6aaa0;
+}
+
+
+/* =========================
+   WORKFLOW
+   ========================= */
+
+.workflow-visual {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.workflow-stage {
+    flex: 1;
+
+    min-height: 105px;
+
+    padding: 14px 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: 1px solid #eadfd6;
+    border-radius: 9px;
+
+    background: #fdf9f6;
+
+    text-align: center;
+}
+
+
+.workflow-stage > i {
+    color: #d4772b;
+
+    font-size: 20px;
+}
+
+
+.workflow-stage strong {
+    color: #475467;
+
+    font-size: 10px;
+}
+
+
+.workflow-stage span {
+    color: #98a2b3;
+
+    font-size: 8px;
+}
+
+
+.workflow-stage-final {
+    background: #fff0e4;
+    border-color: #efc29c;
+}
+
+
+.workflow-visual > i {
+    color: #c6aaa0;
+}
+
+
+/* =========================
+   TECH TAGS
+   ========================= */
+
+.automation-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: 18px;
+}
+
+
+.automation-tech-tags span {
+    padding: 5px 8px;
+
+    border-radius: 6px;
+
+    background: #fff0e4;
+    color: #c46722;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1000px) {
+
+    .automation-case {
+        grid-template-columns: 40px 1fr;
+    }
+
+
+    .automation-case-side {
+        grid-column: 2;
+
+        padding: 25px 0 0;
+
+        border-left: 0;
+        border-top: 1px solid #eee5df;
+    }
+
+
+    .automation-overview {
+        flex-wrap: wrap;
+    }
+
+
+    .automation-capabilities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .automation-section {
+        padding: 60px 20px;
+    }
+
+
+    .automation-case {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        padding: 25px;
+    }
+
+
+    .automation-case-number {
+        display: none;
+    }
+
+
+    .automation-case-side {
+        grid-column: auto;
+    }
+
+
+    .automation-overview {
+        flex-direction: column;
+    }
+
+
+    .automation-overview > i,
+    .procurement-flow > i,
+    .invoice-flow > i,
+    .workflow-visual > i {
+        transform: rotate(90deg);
+    }
+
+
+    .procurement-flow,
+    .invoice-flow,
+    .workflow-visual,
+    .report-flow {
+        flex-direction: column;
+    }
+
+
+    .automation-flow-node,
+    .workflow-stage,
+    .report-processing,
+    .report-output {
+        width: 100%;
+    }
+
+
+    .automation-capabilities {
+        grid-template-columns: 1fr;
+    }
+
+}
+
 /* =========================
    RESPONSIVIDADE
    ========================= */
