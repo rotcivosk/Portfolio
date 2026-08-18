@@ -1,20 +1,257 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f5f6f8;
+    color: #172033;
+}
+
+
+/* =========================
+   ESTRUTURA PRINCIPAL
+   ========================= */
+
+.portfolio {
+    position: relative;
+
     min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    background: white;
+}
+
+
+/* =========================
+   QUADRANTES
+   ========================= */
+
+.area {
+    padding: 60px;
+
+    display: flex;
+}
+
+.area-content {
+    width: 100%;
+}
+
+
+.area h2 {
+    margin: 0;
+
+    font-size: 32px;
+}
+
+.area p {
+    margin-top: 10px;
+    margin-bottom: 35px;
+
+    color: #667085;
+}
+
+
+/* divisões */
+
+.game-development {
+    border-right: 1px solid #d9dde5;
+    border-bottom: 1px solid #d9dde5;
+}
+
+.data-engineering {
+    border-bottom: 1px solid #d9dde5;
+}
+
+.process-automation {
+    border-right: 1px solid #d9dde5;
+}
+
+
+/* =========================
+   CARDS
+   ========================= */
+
+.cards {
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 180px;
+
+    background: white;
+
+    border: 1px solid #e2e5ea;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.card-image {
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #202938;
+    color: white;
+
+    font-weight: bold;
+}
+
+.card h3 {
+    margin: 15px 15px 5px;
+}
+
+.card span {
+    display: block;
+
+    margin: 0 15px 15px;
+
+    font-size: 14px;
+
+    color: #667085;
+}
+
+
+.small-card {
+    padding-top: 15px;
+
+    min-height: 120px;
+}
+
+
+/* =========================
+   TECH STACK
+   ========================= */
+
+.technologies {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+.technologies span {
+    padding: 18px 22px;
+
+    border: 1px solid #e2e5ea;
+
+    border-radius: 10px;
+
+    background: white;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   PERFIL CENTRAL
+   ========================= */
+
+.profile {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 360px;
+    height: 360px;
+
+    border-radius: 50%;
+
+    background: white;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    font-family: Arial, sans-serif;
+    text-align: center;
+
+    border: 1px solid #d9dde5;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+
+    z-index: 10;
 }
 
-img {
 
-    width: 220px;
-    height: 220px;
+.profile-photo {
+    width: 150px;
+    height: 150px;
+
     object-fit: cover;
+
     border-radius: 50%;
+}
+
+
+.profile h1 {
+    margin: 20px 0 5px;
+
+    font-size: 30px;
+}
+
+
+.profile p {
+    margin: 0;
+
+    color: #667085;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .portfolio {
+        display: block;
+    }
+
+    .area {
+        min-height: 500px;
+
+        padding: 40px 25px;
+
+        border-right: none;
+        border-bottom: 1px solid #d9dde5;
+    }
+
+    .profile {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        transform: none;
+
+        margin: 40px auto;
+
+        width: 300px;
+        height: 300px;
+    }
 
 }
