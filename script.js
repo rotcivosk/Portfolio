@@ -16,7 +16,7 @@ const games = [
     {
         title: "F.O.G.",
         genre: "Beat 'em Up Rítmico",
-        description: "A rhythmic beat 'em up project.",
+        description: "Um projeto rítmico de beat 'em up.",
         technologies: ["Unity", "C#"],
         image: null,
         link: "#"
@@ -24,9 +24,9 @@ const games = [
 
     {
         title: "Capy Café",
-        genre: "Regional Cooking Simulation",
+        genre: "Simulação de Cozinha Regional",
         description:
-            "A regional cooking simulation where Capy works at a roadside café in Manaus, serving coffee, x-caboquinho and other regional dishes.",
+            "Uma simulação de cozinha regional onde Capy trabalha em um café à beira da estrada em Manaus, servindo café, x-caboquinho e outros pratos regionais.",
         technologies: ["Unity", "C#"],
         image: "assets/capy.png",
         link: "https://black-moth-studios.itch.io/capy-cafe"
@@ -35,7 +35,7 @@ const games = [
     {
         title: "Bubbled",
         genre: "Party Game",
-        description: "A multiplayer party game project.",
+        description: "Um projeto de party game multiplayer.",
         technologies: ["Unity", "C#"],
         image: null,
         link: "#"
