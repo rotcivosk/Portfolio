@@ -76,6 +76,19 @@ const games = [
         },
         thumbnail: "assets/fire_bat.png",
         link: "#"
+    },
+
+    {
+        title: "DuckTorio",
+        genre: "Simulação de Construção",
+        description: "Um jogo de simulação de construção com patos.",
+        technologies: ["Unity", "C#"],
+        media: {
+            type: "video",
+            src: "assets/ducktorio.mp4"
+        },
+        thumbnail: "assets/ducktorio.png",
+        link: "#"
     }
 ];
 
