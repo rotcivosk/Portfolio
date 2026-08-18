@@ -758,10 +758,553 @@
 
         </section>
 
-        <section id="data" class="content-section">
-            <h2>
-                Engenharia de Dados
-            </h2>
+        <section id="data" class="content-section data-section">
+
+            <!-- =========================
+                HEADER
+                ========================= -->
+
+            <header class="data-section-header">
+
+                <span class="data-section-label">
+                    ENGENHARIA DE DADOS
+                </span>
+
+                <h2>
+                    Da aquisição bruta ao dado confiável
+                </h2>
+
+                <p>
+                    Desenvolvimento de pipelines para ingestão, validação,
+                    sincronização e processamento de dados provenientes de
+                    diferentes dispositivos e formatos.
+                </p>
+
+            </header>
+
+
+            <!-- =========================
+                VISÃO GERAL DO PIPELINE
+                ========================= -->
+
+            <div class="data-pipeline-overview">
+
+                <div class="data-pipeline-sources">
+
+                    <div class="data-source">
+                        <i class="bi bi-activity"></i>
+                        <span>ECG 12-Lead</span>
+                    </div>
+
+                    <div class="data-source">
+                        <i class="bi bi-heart-pulse"></i>
+                        <span>Holter</span>
+                    </div>
+
+                    <div class="data-source">
+                        <i class="bi bi-broadcast"></i>
+                        <span>Looper</span>
+                    </div>
+
+                    <div class="data-source">
+                        <i class="bi bi-phone"></i>
+                        <span>Mobile</span>
+                    </div>
+
+                    <div class="data-source">
+                        <i class="bi bi-smartwatch"></i>
+                        <span>Wearables</span>
+                    </div>
+
+                </div>
+
+
+                <div class="data-pipeline-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                </div>
+
+
+                <div class="data-pipeline-processing">
+
+                    <div>
+                        <span>01</span>
+                        Ingestion
+                    </div>
+
+                    <i class="bi bi-arrow-right"></i>
+
+                    <div>
+                        <span>02</span>
+                        Validation
+                    </div>
+
+                    <i class="bi bi-arrow-right"></i>
+
+                    <div>
+                        <span>03</span>
+                        Synchronization
+                    </div>
+
+                    <i class="bi bi-arrow-right"></i>
+
+                    <div>
+                        <span>04</span>
+                        Processing
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                01 - MULTI SOURCE
+                ========================= -->
+
+            <article class="data-case">
+
+                <div class="data-case-number">
+                    01
+                </div>
+
+                <div class="data-case-main">
+
+                    <header class="data-case-header">
+
+                        <div class="data-case-icon">
+                            <i class="bi bi-diagram-3"></i>
+                        </div>
+
+                        <div>
+                            <span>Multi-Source Data</span>
+                            <h3>Ingestão de fontes heterogêneas</h3>
+                        </div>
+
+                    </header>
+
+
+                    <p class="data-case-description">
+                        Integração de registros gerados por dispositivos e sistemas
+                        com estruturas, formatos e características completamente
+                        diferentes dentro de uma única arquitetura de processamento.
+                    </p>
+
+
+                    <div class="data-source-grid">
+
+                        <div>
+                            <strong>ECG 12-Lead</strong>
+                            <span>Sinais multicanais</span>
+                        </div>
+
+                        <div>
+                            <strong>Holter</strong>
+                            <span>Registros contínuos</span>
+                        </div>
+
+                        <div>
+                            <strong>Looper</strong>
+                            <span>Eventos e sinais</span>
+                        </div>
+
+                        <div>
+                            <strong>Mobile</strong>
+                            <span>Sensores e registros</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <aside class="data-case-side">
+
+                    <h4>Principais desafios</h4>
+
+                    <ul>
+                        <li>Diferentes formatos de arquivo</li>
+                        <li>Estruturas específicas por fonte</li>
+                        <li>Metadados não uniformes</li>
+                        <li>Estratégias independentes de processamento</li>
+                    </ul>
+
+                </aside>
+
+            </article>
+
+
+            <!-- =========================
+                02 - VALIDATION
+                ========================= -->
+
+            <article class="data-case">
+
+                <div class="data-case-number">
+                    02
+                </div>
+
+                <div class="data-case-main">
+
+                    <header class="data-case-header">
+
+                        <div class="data-case-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+
+                        <div>
+                            <span>Data Quality</span>
+                            <h3>Validação, regras e padronização</h3>
+                        </div>
+
+                    </header>
+
+
+                    <p class="data-case-description">
+                        Antes de avançar no pipeline, cada fonte passa por regras
+                        próprias de validação, transformação e padronização para
+                        garantir consistência e rastreabilidade.
+                    </p>
+
+
+                    <div class="validation-flow">
+
+                        <div class="validation-node">
+                            <i class="bi bi-file-earmark"></i>
+                            <span>Raw Data</span>
+                        </div>
+
+                        <i class="bi bi-arrow-right"></i>
+
+                        <div class="validation-node">
+                            <i class="bi bi-check2-square"></i>
+                            <span>Rules</span>
+                        </div>
+
+                        <i class="bi bi-arrow-right"></i>
+
+                        <div class="validation-node">
+                            <i class="bi bi-sliders"></i>
+                            <span>Normalize</span>
+                        </div>
+
+                        <i class="bi bi-arrow-right"></i>
+
+                        <div class="validation-split">
+
+                            <div class="validation-valid">
+                                <i class="bi bi-check-circle"></i>
+                                Valid
+                            </div>
+
+                            <div class="validation-invalid">
+                                <i class="bi bi-exclamation-triangle"></i>
+                                Quarantine
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <aside class="data-case-side">
+
+                    <h4>Implementado</h4>
+
+                    <ul>
+                        <li>Validação estrutural</li>
+                        <li>Regras específicas por fonte</li>
+                        <li>Padronização de campos</li>
+                        <li>Normalização de timestamps</li>
+                        <li>Tratamento de dados inválidos</li>
+                        <li>Quarentena e rastreabilidade</li>
+                    </ul>
+
+                </aside>
+
+            </article>
+
+
+            <!-- =========================
+                03 - SYNCHRONIZATION
+                ========================= -->
+
+            <article class="data-case data-case-featured">
+
+                <div class="data-case-number">
+                    03
+                </div>
+
+                <div class="data-case-main">
+
+                    <header class="data-case-header">
+
+                        <div class="data-case-icon">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+
+                        <div>
+                            <span>Temporal Data</span>
+                            <h3>Sincronização entre diferentes fontes</h3>
+                        </div>
+
+                    </header>
+
+
+                    <p class="data-case-description">
+                        Registros produzidos por dispositivos independentes precisam
+                        ser relacionados temporalmente antes de poderem ser analisados
+                        em conjunto. Isso exige tratar timestamps, offsets,
+                        granularidades e diferentes formas de representar tempo.
+                    </p>
+
+
+                    <div class="sync-visual">
+
+                        <div class="sync-row">
+                            <span>ECG</span>
+
+                            <div class="sync-track">
+                                <div class="sync-signal sync-signal-a"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="sync-row">
+                            <span>Mobile</span>
+
+                            <div class="sync-track">
+                                <div class="sync-signal sync-signal-b"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="sync-row">
+                            <span>Wearable</span>
+
+                            <div class="sync-track">
+                                <div class="sync-signal sync-signal-c"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="sync-marker">
+                            <span>T</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="sync-result">
+
+                        <i class="bi bi-arrow-down"></i>
+
+                        <div>
+                            <i class="bi bi-link-45deg"></i>
+
+                            <span>
+                                Aligned Timeline
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <aside class="data-case-side">
+
+                    <h4>Problemas tratados</h4>
+
+                    <ul>
+                        <li>Timestamps de origens diferentes</li>
+                        <li>Offsets temporais</li>
+                        <li>Diferentes granularidades</li>
+                        <li>Registros independentes</li>
+                        <li>Alinhamento de séries temporais</li>
+                        <li>Comparação entre fontes</li>
+                    </ul>
+
+                </aside>
+
+            </article>
+
+
+            <!-- =========================
+                04 - DATA LAKE
+                ========================= -->
+
+            <article class="data-case">
+
+                <div class="data-case-number">
+                    04
+                </div>
+
+                <div class="data-case-main">
+
+                    <header class="data-case-header">
+
+                        <div class="data-case-icon">
+                            <i class="bi bi-database"></i>
+                        </div>
+
+                        <div>
+                            <span>Data Architecture</span>
+                            <h3>Arquitetura de Data Lake em camadas</h3>
+                        </div>
+
+                    </header>
+
+
+                    <p class="data-case-description">
+                        Organização do ciclo de processamento em diferentes camadas,
+                        preservando o dado original e aumentando progressivamente
+                        seu nível de estruturação e confiabilidade.
+                    </p>
+
+
+                    <div class="lake-flow">
+
+                        <div class="lake-stage">
+                            <span>RAW</span>
+                            <small>Original</small>
+                        </div>
+
+                        <i class="bi bi-chevron-right"></i>
+
+                        <div class="lake-stage">
+                            <span>BRONZE</span>
+                            <small>Structured</small>
+                        </div>
+
+                        <i class="bi bi-chevron-right"></i>
+
+                        <div class="lake-stage">
+                            <span>SILVER</span>
+                            <small>Normalized</small>
+                        </div>
+
+                        <i class="bi bi-chevron-right"></i>
+
+                        <div class="lake-stage">
+                            <span>GOLD</span>
+                            <small>Ready to consume</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <aside class="data-case-side">
+
+                    <h4>Arquitetura</h4>
+
+                    <ul>
+                        <li>Preservação do dado bruto</li>
+                        <li>Processamento incremental</li>
+                        <li>Pipelines independentes</li>
+                        <li>Separação de responsabilidades</li>
+                        <li>Dados preparados para consumo</li>
+                    </ul>
+
+                </aside>
+
+            </article>
+
+
+            <!-- =========================
+                05 - INFRASTRUCTURE
+                ========================= -->
+
+            <article class="data-case">
+
+                <div class="data-case-number">
+                    05
+                </div>
+
+                <div class="data-case-main">
+
+                    <header class="data-case-header">
+
+                        <div class="data-case-icon">
+                            <i class="bi bi-server"></i>
+                        </div>
+
+                        <div>
+                            <span>Infrastructure & Operations</span>
+                            <h3>Infraestrutura e operação dos serviços</h3>
+                        </div>
+
+                    </header>
+
+
+                    <p class="data-case-description">
+                        Os pipelines fazem parte de uma plataforma executada em
+                        ambiente Linux, com serviços containerizados, persistência
+                        de dados e aplicações internas para operação e consumo.
+                    </p>
+
+
+                    <div class="infra-diagram">
+
+                        <div class="infra-server">
+
+                            <div class="infra-server-title">
+                                <i class="bi bi-server"></i>
+                                Linux Server
+                            </div>
+
+                            <div class="infra-services">
+
+                                <div>
+                                    <i class="bi bi-box"></i>
+                                    <span>Ingestion</span>
+                                </div>
+
+                                <div>
+                                    <i class="bi bi-box"></i>
+                                    <span>Processing</span>
+                                </div>
+
+                                <div>
+                                    <i class="bi bi-database"></i>
+                                    <span>PostgreSQL</span>
+                                </div>
+
+                                <div>
+                                    <i class="bi bi-window"></i>
+                                    <span>Applications</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <aside class="data-case-side">
+
+                    <h4>Stack</h4>
+
+                    <div class="data-tech-tags">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>PostgreSQL</span>
+                        <span>Docker</span>
+                        <span>Linux</span>
+                        <span>Git</span>
+                        <span>FastAPI</span>
+                    </div>
+
+                </aside>
+
+            </article>
+
         </section>
 
         <section id="automation" class="content-section">
