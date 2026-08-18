@@ -1,16 +1,24 @@
-const areas = document.querySelectorAll('.area-link');
+/* =========================
+   NAVEGAÇÃO ENTRE SEÇÕES
+   ========================= */
 
-areas.forEach(area => {
-    area.addEventListener('click', () => {
-        const targetId = area.dataset.target;
+const areaLinks = document.querySelectorAll(".area-link");
+
+areaLinks.forEach((areaLink) => {
+    areaLink.addEventListener("click", () => {
+        const targetId = areaLink.dataset.target;
         const targetSection = document.getElementById(targetId);
 
         targetSection.scrollIntoView({
-            behavior: 'smooth'
+            behavior: "smooth"
         });
     });
 });
 
+
+/* =========================
+   DADOS DOS JOGOS
+   ========================= */
 
 const games = [
     {
@@ -43,8 +51,16 @@ const games = [
 ];
 
 
+/* =========================
+   ESTADO DO CARROSSEL
+   ========================= */
+
 let currentGame = 0;
 
+
+/* =========================
+   ELEMENTOS DO HTML
+   ========================= */
 
 const gameTitle = document.getElementById("game-title");
 const gameGenre = document.getElementById("game-genre");
@@ -56,39 +72,107 @@ const gameLink = document.getElementById("game-link");
 const previousButton = document.getElementById("game-prev");
 const nextButton = document.getElementById("game-next");
 
+const gameThumbnails = document.getElementById("game-thumbnails");
+
+
+/* =========================
+   EXIBIR JOGO
+   ========================= */
 
 function showGame(index) {
     const game = games[index];
 
+    // Informações principais
     gameTitle.textContent = game.title;
     gameGenre.textContent = game.genre;
     gameDescription.textContent = game.description;
     gameLink.href = game.link;
+
 
     // Tecnologias
     gameTechnologies.innerHTML = "";
 
     game.technologies.forEach((technology) => {
         const span = document.createElement("span");
+
         span.textContent = technology;
+
         gameTechnologies.appendChild(span);
     });
 
+
     // Imagem
     if (game.image) {
-        gameImage.style.backgroundImage = `url('${game.image}')`;
-        gameImage.style.backgroundSize = "cover";
-        gameImage.style.backgroundPosition = "center";
-        gameImage.style.backgroundRepeat = "no-repeat";
+        gameImage.style.backgroundImage = `url("${game.image}")`;
         gameImage.textContent = "";
     } else {
         gameImage.style.backgroundImage = "none";
         gameImage.textContent = game.title;
     }
+
+
+    // Miniatura selecionada
+    const thumbnails = document.querySelectorAll(".game-thumbnail");
+
+    thumbnails.forEach((thumbnail, thumbnailIndex) => {
+        thumbnail.classList.toggle(
+            "active",
+            thumbnailIndex === index
+        );
+    });
 }
 
-previousButton.addEventListener("click", (event) => {
 
+/* =========================
+   CRIAR MINIATURAS
+   ========================= */
+
+function createGameThumbnails() {
+    gameThumbnails.innerHTML = "";
+
+    games.forEach((game, index) => {
+        const button = document.createElement("button");
+
+        button.classList.add("game-thumbnail");
+        button.type = "button";
+        button.setAttribute("aria-label", `Selecionar ${game.title}`);
+
+
+        if (game.image) {
+            const image = document.createElement("img");
+
+            image.src = game.image;
+            image.alt = game.title;
+
+            button.appendChild(image);
+        } else {
+            const title = document.createElement("span");
+
+            title.textContent = game.title;
+
+            button.appendChild(title);
+        }
+
+
+        button.addEventListener("click", (event) => {
+            event.stopPropagation();
+
+            currentGame = index;
+
+            showGame(currentGame);
+        });
+
+
+        gameThumbnails.appendChild(button);
+    });
+}
+
+
+/* =========================
+   CONTROLES DO CARROSSEL
+   ========================= */
+
+previousButton.addEventListener("click", (event) => {
     event.stopPropagation();
 
     currentGame--;
@@ -102,7 +186,6 @@ previousButton.addEventListener("click", (event) => {
 
 
 nextButton.addEventListener("click", (event) => {
-
     event.stopPropagation();
 
     currentGame++;
@@ -120,4 +203,9 @@ gameLink.addEventListener("click", (event) => {
 });
 
 
+/* =========================
+   INICIALIZAÇÃO
+   ========================= */
+
+createGameThumbnails();
 showGame(currentGame);

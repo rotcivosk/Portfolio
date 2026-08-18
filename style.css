@@ -209,7 +209,7 @@ body {
 
 .game-card {
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 200px 1fr;
 
     width: 100%;
 
@@ -225,6 +225,7 @@ body {
 
 
 .game-card-image {
+    height: 220px;
     min-height: 220px;
 
     display: flex;
@@ -234,7 +235,7 @@ body {
     background-color: #202938;
     color: white;
 
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
 
     background-size: cover;
@@ -317,6 +318,91 @@ body {
 .carousel-button:hover {
     transform: scale(1.15);
 }
+
+
+
+
+
+/* =========================
+   GAME THUMBNAILS
+   ========================= */
+
+.game-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 8px;
+
+    width: 100%;
+    max-width: 640px;
+
+    margin-bottom: 10px;
+}
+
+
+.game-thumbnail {
+    height: 58px;
+
+    padding: 0;
+
+    border: 2px solid transparent;
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    background: #202938;
+    color: white;
+
+    cursor: pointer;
+
+    opacity: 0.65;
+
+    transition:
+        opacity 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.game-thumbnail:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+
+.game-thumbnail.active {
+    opacity: 1;
+
+    border-color: #3568c0;
+}
+
+
+.game-thumbnail img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.game-thumbnail span {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    text-align: center;
+}
+
 
 /* =========================
    DATA ENGINEERING
