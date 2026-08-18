@@ -136,7 +136,180 @@ body {
     min-height: 120px;
 }
 
+/* =========================
+   GAME CAROUSEL
+   ========================= */
 
+.game-carousel {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    max-width: 700px;
+}
+
+
+
+.carousel-button {
+    position: relative;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #d9dde5;
+    border-radius: 50%;
+
+    background: white;
+    color: #172033;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+    z-index: 5;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+#game-prev {
+    left: -21px;
+}
+
+
+#game-next {
+    right: -21px;
+}
+
+
+.carousel-button:hover {
+    transform: translateY(-50%) scale(1.1);
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.game-card {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+
+    width: 100%;
+
+    background: white;
+
+    border: 1px solid #e2e5ea;
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.game-card-image {
+    min-height: 220px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #202938;
+    color: white;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.game-card-content {
+    padding: 25px;
+}
+
+
+.game-card-content h3 {
+    margin: 0 0 5px;
+
+    font-size: 24px;
+}
+
+
+.game-card-content > span {
+    color: #667085;
+}
+
+
+.game-card-content p {
+    margin: 20px 0;
+
+    line-height: 1.5;
+}
+
+
+.game-technologies {
+    display: flex;
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+
+.game-technologies span {
+    padding: 6px 10px;
+
+    background: #f0f2f5;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.game-link {
+    color: #172033;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.game-link:hover {
+    text-decoration: underline;
+}
+
+
+.carousel-button {
+    border: none;
+
+    background: transparent;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    color: #172033;
+}
+
+
+.carousel-button:hover {
+    transform: scale(1.15);
+}
 /* =========================
    TECH STACK
    ========================= */
