@@ -78,7 +78,11 @@ body {
     border-right: 1px solid #d9dde5;
 }
 
-
+/* Títulos dos quadrantes da direita */
+.data-engineering .area-link,
+.tech-stack .area-link {
+    text-align: right;
+}
 /* =========================
    CARDS
    ========================= */
@@ -853,6 +857,181 @@ body {
 
 
 
+
+/* =========================
+   AJUSTE DE ESCALA - DESKTOP
+   Mantem a pagina confortavel em 100% de zoom
+   ========================= */
+
+.area {
+    padding: clamp(36px, 2.8vw, 48px);
+}
+
+.area h2 {
+    font-size: clamp(26px, 2vw, 30px);
+}
+
+.area p {
+    margin-top: 8px;
+    margin-bottom: clamp(24px, 2vw, 30px);
+}
+
+/* Game Development */
+.game-carousel {
+    width: 100%;
+    max-width: 640px;
+}
+
+.game-card {
+    grid-template-columns: clamp(180px, 13vw, 200px) 1fr;
+}
+
+.game-card-image {
+    min-height: 200px;
+    font-size: 22px;
+}
+
+.game-card-content {
+    padding: 20px;
+}
+
+.game-card-content h3 {
+    font-size: 22px;
+}
+
+.game-card-content p {
+    margin: 14px 0;
+}
+
+.game-technologies {
+    margin-bottom: 14px;
+}
+
+/* Data Engineering */
+.data-cards,
+.automation-cards,
+.stack-grid {
+    gap: clamp(10px, 1vw, 14px);
+}
+
+.data-card {
+    padding: 14px;
+}
+
+.data-card-header {
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.data-card-icon,
+.automation-icon,
+.stack-icon {
+    min-width: 34px;
+    height: 34px;
+    font-size: 18px;
+}
+
+.data-card h3 {
+    font-size: 15px;
+}
+
+.data-card-header span {
+    font-size: 11px;
+}
+
+.etl-node {
+    padding: 8px 6px;
+    font-size: 10px;
+}
+
+.etl-node i {
+    font-size: 18px;
+}
+
+.lake-layer {
+    padding: 5px;
+    font-size: 10px;
+}
+
+.quality-item {
+    padding: 6px 8px;
+    font-size: 11px;
+}
+
+/* Process Automation */
+.automation-card,
+.stack-card {
+    padding: 13px;
+}
+
+.automation-card-header,
+.stack-card-header {
+    gap: 9px;
+    margin-bottom: 10px;
+}
+
+.automation-card h3,
+.stack-card h3 {
+    font-size: 14px;
+}
+
+.automation-card-header span,
+.stack-card-header span {
+    font-size: 10px;
+}
+
+.automation-flow,
+.low-code-flow,
+.automation-report {
+    margin: 9px 0;
+}
+
+.automation-flow span,
+.low-code-flow div {
+    padding: 5px 7px;
+    font-size: 9px;
+}
+
+.automation-tools {
+    gap: 5px;
+    margin-top: 9px;
+}
+
+.automation-tools span {
+    padding: 3px 6px;
+    font-size: 9px;
+}
+
+/* Tech Stack */
+.stack-tags {
+    gap: 5px;
+}
+
+.stack-tags span {
+    padding: 5px 7px;
+    font-size: 9px;
+}
+
+/* Perfil central */
+.profile {
+    width: clamp(290px, 19vw, 320px);
+    height: clamp(290px, 19vw, 320px);
+}
+
+.profile-photo {
+    width: clamp(105px, 7.5vw, 130px);
+    height: clamp(105px, 7.5vw, 130px);
+}
+
+.profile h1 {
+    margin: 16px 0 4px;
+    font-size: clamp(24px, 1.8vw, 28px);
+}
+
+.profile p {
+    font-size: 14px;
+}
+
 /* =========================
    RESPONSIVIDADE
    ========================= */
@@ -866,7 +1045,7 @@ body {
     .area {
         min-height: 500px;
 
-        padding: 40px 25px;
+        padding: 32px 24px;
 
         border-right: none;
         border-bottom: 1px solid #d9dde5;
@@ -882,8 +1061,8 @@ body {
 
         margin: 40px auto;
 
-        width: 300px;
-        height: 300px;
+        width: min(300px, calc(100vw - 48px));
+        height: min(300px, calc(100vw - 48px));
     }
 
 }
