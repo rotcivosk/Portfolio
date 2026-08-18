@@ -517,6 +517,172 @@ body {
     color: #b42318;
 }
 
+
+
+/* =========================
+   PROCESS AUTOMATION
+   ========================= */
+
+.automation-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    width: 100%;
+}
+
+
+.automation-card {
+    padding: 16px;
+
+    border: 1px solid #e2e5ea;
+    border-radius: 12px;
+
+    background: white;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+/* HEADER */
+
+.automation-card-header {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+.automation-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 38px;
+    height: 38px;
+
+    border-radius: 8px;
+
+    background: #fff4e8;
+    color: #c66a15;
+
+    font-size: 20px;
+}
+
+
+.automation-card h3 {
+    margin: 0 0 4px;
+
+    font-size: 16px;
+}
+
+
+.automation-card-header span {
+    font-size: 12px;
+
+    color: #667085;
+}
+
+
+/* FLUXOS */
+
+.automation-flow,
+.low-code-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin: 12px 0;
+}
+
+
+.automation-flow span,
+.low-code-flow div {
+    padding: 7px 9px;
+
+    border: 1px solid #eadfd3;
+    border-radius: 7px;
+
+    background: #fffaf5;
+
+    font-size: 11px;
+}
+
+
+.automation-flow i,
+.low-code-flow i {
+    color: #667085;
+}
+
+
+/* REPORT */
+
+.automation-report {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 12px 0;
+}
+
+
+.automation-report div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 3px;
+}
+
+
+.automation-report div i {
+    font-size: 21px;
+
+    color: #c66a15;
+}
+
+
+.automation-report small {
+    font-size: 10px;
+
+    color: #667085;
+}
+
+
+/* FERRAMENTAS */
+
+.automation-tools {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: 12px;
+}
+
+
+.automation-tools span {
+    padding: 4px 7px;
+
+    border-radius: 5px;
+
+    background: #f4f5f7;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    color: #475467;
+}
+
+
 /* =========================
    TECH STACK
    ========================= */
