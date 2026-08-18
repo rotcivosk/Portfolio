@@ -38,6 +38,9 @@ body {
     padding: 60px;
 
     display: flex;
+}
+
+.area-link {
     cursor: pointer;
 }
 

@@ -1,4 +1,4 @@
-const areas = document.querySelectorAll('.area');
+const areas = document.querySelectorAll('.area-link');
 
 areas.forEach(area => {
     area.addEventListener('click', () => {
