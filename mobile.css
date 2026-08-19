@@ -1,0 +1,982 @@
+/* =========================================================
+   MOBILE EXPERIENCE
+   Loaded only at max-width: 900px.
+   Desktop remains controlled by style.css.
+   ========================================================= */
+
+:root {
+    --mobile-ink: #141926;
+    --mobile-muted: #667085;
+    --mobile-line: #e7e9ee;
+    --mobile-surface: #ffffff;
+    --mobile-bg: #f5f6f8;
+
+    --mobile-games: #5b5bd6;
+    --mobile-games-soft: #efefff;
+
+    --mobile-data: #16846b;
+    --mobile-data-soft: #eaf6f2;
+
+    --mobile-automation: #d4772b;
+    --mobile-automation-soft: #fff0e4;
+
+    --mobile-stack: #3568c0;
+    --mobile-stack-soft: #eef4ff;
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-bottom: 80px;
+}
+
+body {
+    min-width: 0;
+    padding-bottom: 76px;
+    overflow-x: hidden;
+
+    background: var(--mobile-bg);
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+.desktop-home {
+    display: none !important;
+}
+
+.mobile-home {
+    display: block;
+}
+
+.mobile-bottom-nav {
+    display: flex;
+}
+
+.content-section {
+    min-height: auto;
+    scroll-margin-top: 12px;
+}
+
+
+/* =========================================================
+   MOBILE HERO
+   ========================================================= */
+
+.mobile-hero {
+    position: relative;
+    overflow: hidden;
+
+    padding:
+        calc(30px + env(safe-area-inset-top))
+        22px
+        42px;
+
+    background:
+        radial-gradient(circle at 90% 5%, rgba(122, 114, 255, .28), transparent 32%),
+        radial-gradient(circle at 0% 100%, rgba(22, 132, 107, .18), transparent 36%),
+        linear-gradient(145deg, #151927 0%, #1e2435 55%, #242a3c 100%);
+
+    color: #ffffff;
+}
+
+.mobile-hero::after {
+    content: "";
+
+    position: absolute;
+    right: -100px;
+    bottom: -120px;
+
+    width: 260px;
+    height: 260px;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 45px rgba(255, 255, 255, .02),
+        0 0 0 90px rgba(255, 255, 255, .015);
+
+    pointer-events: none;
+}
+
+.mobile-hero-topline {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 34px;
+
+    color: rgba(255, 255, 255, .68);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.mobile-availability-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #70dfb8;
+
+    box-shadow: 0 0 0 5px rgba(112, 223, 184, .10);
+}
+
+.mobile-hero-profile {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 82px minmax(0, 1fr);
+    align-items: center;
+
+    gap: 18px;
+}
+
+.mobile-profile-photo {
+    width: 82px;
+    height: 82px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border: 3px solid rgba(255, 255, 255, .18);
+    border-radius: 24px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .24);
+}
+
+.mobile-eyebrow {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #9ca6ff;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .16em;
+}
+
+.mobile-hero h1 {
+    margin: 0 0 5px;
+
+    font-size: clamp(30px, 9vw, 40px);
+    line-height: 1;
+    letter-spacing: -.045em;
+}
+
+.mobile-hero-profile p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, .67);
+
+    font-size: 12px;
+}
+
+.mobile-hero-intro {
+    position: relative;
+    z-index: 1;
+
+    max-width: 520px;
+
+    margin: 28px 0 24px;
+
+    color: rgba(255, 255, 255, .76);
+
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.mobile-primary-action {
+    position: relative;
+    z-index: 1;
+
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 11px 15px;
+
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, .08);
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   MOBILE LANDING: EXPERTISE
+   ========================================================= */
+
+.mobile-expertise {
+    padding: 44px 18px 26px;
+}
+
+.mobile-section-heading {
+    margin: 0 4px 24px;
+}
+
+.mobile-section-heading > span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #7b8496;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .14em;
+}
+
+.mobile-section-heading h2 {
+    margin: 0;
+
+    color: var(--mobile-ink);
+
+    font-size: 28px;
+    letter-spacing: -.035em;
+}
+
+.mobile-expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+}
+
+.mobile-expertise-card {
+    position: relative;
+
+    min-height: 190px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(20, 25, 38, .06);
+    border-radius: 22px;
+
+    background: var(--mobile-surface);
+    color: var(--mobile-ink);
+
+    text-decoration: none;
+
+    box-shadow: 0 10px 30px rgba(16, 24, 40, .055);
+}
+
+.mobile-expertise-card::after {
+    content: "";
+
+    position: absolute;
+    right: -28px;
+    bottom: -48px;
+
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    opacity: .55;
+
+    pointer-events: none;
+}
+
+.mobile-expertise-games::after {
+    background: var(--mobile-games-soft);
+}
+
+.mobile-expertise-data::after {
+    background: var(--mobile-data-soft);
+}
+
+.mobile-expertise-automation::after {
+    background: var(--mobile-automation-soft);
+}
+
+.mobile-expertise-stack::after {
+    background: var(--mobile-stack-soft);
+}
+
+.mobile-card-top {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 26px;
+}
+
+.mobile-card-top > span {
+    color: #98a2b3;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .12em;
+}
+
+.mobile-card-top > i {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+}
+
+.mobile-expertise-games .mobile-card-top > i {
+    background: var(--mobile-games-soft);
+    color: var(--mobile-games);
+}
+
+.mobile-expertise-data .mobile-card-top > i {
+    background: var(--mobile-data-soft);
+    color: var(--mobile-data);
+}
+
+.mobile-expertise-automation .mobile-card-top > i {
+    background: var(--mobile-automation-soft);
+    color: var(--mobile-automation);
+}
+
+.mobile-expertise-stack .mobile-card-top > i {
+    background: var(--mobile-stack-soft);
+    color: var(--mobile-stack);
+}
+
+.mobile-expertise-card h3 {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 0 8px;
+
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: -.025em;
+}
+
+.mobile-expertise-card p {
+    position: relative;
+    z-index: 1;
+
+    max-width: 85%;
+
+    margin: 0;
+
+    color: var(--mobile-muted);
+
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.mobile-card-footer {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-top: auto;
+    padding-top: 24px;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.mobile-card-footer > span {
+    color: #7c8493;
+}
+
+.mobile-card-footer > i {
+    font-size: 19px;
+}
+
+.mobile-expertise-games .mobile-card-footer > i {
+    color: var(--mobile-games);
+}
+
+.mobile-expertise-data .mobile-card-footer > i {
+    color: var(--mobile-data);
+}
+
+.mobile-expertise-automation .mobile-card-footer > i {
+    color: var(--mobile-automation);
+}
+
+.mobile-expertise-stack .mobile-card-footer > i {
+    color: var(--mobile-stack);
+}
+
+
+/* =========================================================
+   MOBILE LANDING: QUICK STACK
+   ========================================================= */
+
+.mobile-highlight-strip {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    padding: 8px 18px 42px;
+}
+
+.mobile-highlight-strip span {
+    padding: 7px 10px;
+
+    border: 1px solid #e5e8ed;
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, .74);
+    color: #596274;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   BOTTOM NAVIGATION
+   ========================================================= */
+
+.mobile-bottom-nav {
+    position: fixed;
+    right: 10px;
+    bottom: max(10px, env(safe-area-inset-bottom));
+    left: 10px;
+
+    z-index: 100;
+
+    align-items: center;
+    justify-content: space-around;
+
+    min-height: 60px;
+
+    padding: 7px 5px;
+
+    border: 1px solid rgba(16, 24, 40, .08);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, .94);
+
+    box-shadow: 0 14px 40px rgba(16, 24, 40, .16);
+
+    backdrop-filter: blur(14px);
+}
+
+.mobile-bottom-nav a {
+    min-width: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 3px;
+
+    padding: 6px 5px;
+
+    border-radius: 12px;
+
+    color: #697386;
+
+    text-decoration: none;
+
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.mobile-bottom-nav i {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   SHARED CONTENT
+   ========================================================= */
+
+.content-section,
+.games-section,
+.data-section,
+.automation-section {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+
+/* =========================================================
+   GAME DEVELOPMENT - MOBILE
+   ========================================================= */
+
+.games-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.section-header {
+    margin-bottom: 38px;
+}
+
+.section-header h2 {
+    font-size: 34px;
+    line-height: 1.05;
+    letter-spacing: -.04em;
+}
+
+.section-header p {
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.game-project,
+.game-project-reverse {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+
+    margin-bottom: 64px;
+    padding-bottom: 64px;
+}
+
+.game-project-reverse .game-project-media,
+.game-project-reverse .game-project-content {
+    order: initial;
+}
+
+.game-project-media {
+    aspect-ratio: 16 / 10;
+
+    border-radius: 16px;
+}
+
+.game-project-header {
+    flex-direction: column;
+
+    gap: 14px;
+
+    margin-bottom: 16px;
+}
+
+.game-project h3 {
+    font-size: 30px;
+}
+
+.project-technologies {
+    justify-content: flex-start;
+}
+
+.project-description {
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.project-details {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+
+    margin-bottom: 26px;
+}
+
+.project-details h4 {
+    font-size: 14px;
+}
+
+.project-details li,
+.project-details p {
+    font-size: 13px;
+}
+
+.project-button {
+    width: 100%;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   DATA ENGINEERING - MOBILE
+   ========================================================= */
+
+.data-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.data-section-header {
+    margin-bottom: 42px;
+
+    text-align: left;
+}
+
+.data-section-header h2 {
+    font-size: 34px;
+    letter-spacing: -.04em;
+}
+
+.data-section-header p {
+    font-size: 14px;
+}
+
+.data-pipeline-overview {
+    flex-direction: column;
+
+    gap: 20px;
+
+    margin-bottom: 48px;
+    padding: 18px;
+
+    border-radius: 16px;
+}
+
+.data-pipeline-sources {
+    width: 100%;
+
+    flex: initial;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 7px;
+}
+
+.data-pipeline-arrow {
+    transform: rotate(90deg);
+}
+
+.data-pipeline-processing {
+    width: 100%;
+
+    flex-direction: column;
+}
+
+.data-pipeline-processing > div {
+    width: 100%;
+
+    padding: 12px;
+}
+
+.data-pipeline-processing > i {
+    transform: rotate(90deg);
+}
+
+.data-case {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 18px;
+    padding: 23px 20px;
+
+    border-radius: 16px;
+}
+
+.data-case-number {
+    display: none;
+}
+
+.data-case-header {
+    align-items: flex-start;
+}
+
+.data-case-icon {
+    width: 42px;
+    height: 42px;
+
+    font-size: 19px;
+}
+
+.data-case-header h3 {
+    font-size: 21px;
+}
+
+.data-case-description {
+    margin-bottom: 22px;
+
+    font-size: 13px;
+}
+
+.data-case-side {
+    grid-column: auto;
+
+    padding: 20px 0 0;
+
+    border-top: 1px solid #e3e9e7;
+    border-left: 0;
+}
+
+.data-source-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.validation-flow {
+    flex-direction: column;
+
+    align-items: stretch;
+}
+
+.validation-node {
+    width: 100%;
+}
+
+.validation-flow > i {
+    align-self: center;
+
+    transform: rotate(90deg);
+}
+
+.validation-split {
+    width: 100%;
+}
+
+.validation-valid,
+.validation-invalid {
+    width: 100%;
+}
+
+.sync-row {
+    grid-template-columns: 60px 1fr;
+
+    gap: 8px;
+}
+
+.sync-marker {
+    left: 63%;
+}
+
+.lake-flow {
+    flex-direction: column;
+}
+
+.lake-stage {
+    width: 100%;
+}
+
+.lake-flow > i {
+    transform: rotate(90deg);
+}
+
+.infra-services {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+/* =========================================================
+   PROCESS AUTOMATION - MOBILE
+   ========================================================= */
+
+.automation-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.automation-section-header {
+    margin-bottom: 42px;
+
+    text-align: left;
+}
+
+.automation-section-header h2 {
+    font-size: 34px;
+    letter-spacing: -.04em;
+}
+
+.automation-section-header p {
+    font-size: 14px;
+}
+
+.automation-overview {
+    flex-direction: column;
+
+    gap: 11px;
+
+    margin-bottom: 48px;
+    padding: 22px;
+}
+
+.automation-overview > i {
+    transform: rotate(90deg);
+}
+
+.automation-overview-step {
+    width: 100%;
+}
+
+.automation-case {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 18px;
+    padding: 23px 20px;
+
+    border-radius: 16px;
+}
+
+.automation-case-number {
+    display: none;
+}
+
+.automation-case-header {
+    align-items: flex-start;
+}
+
+.automation-case-header h3 {
+    font-size: 21px;
+}
+
+.automation-case-description {
+    font-size: 13px;
+}
+
+.automation-case-side {
+    grid-column: auto;
+
+    padding: 20px 0 0;
+
+    border-top: 1px solid #eee5df;
+    border-left: 0;
+}
+
+.procurement-flow,
+.invoice-flow,
+.workflow-visual,
+.report-flow {
+    flex-direction: column;
+
+    align-items: stretch;
+}
+
+.procurement-flow > i,
+.invoice-flow > i,
+.workflow-visual > i {
+    align-self: center;
+
+    transform: rotate(90deg);
+}
+
+.automation-flow-node,
+.workflow-stage,
+.report-processing,
+.report-output {
+    width: 100%;
+}
+
+.automation-capabilities {
+    grid-template-columns: 1fr 1fr;
+}
+
+.report-arrow {
+    align-self: center;
+
+    transform: rotate(90deg);
+}
+
+.report-sources {
+    width: 100%;
+}
+
+.report-sources span {
+    width: 100%;
+}
+
+.workflow-stage {
+    min-height: 90px;
+}
+
+
+/* =========================================================
+   TECH STACK SHARED SECTION
+   ========================================================= */
+
+#stack.content-section {
+    min-height: 50vh;
+
+    padding-top: 64px;
+    padding-bottom: 120px;
+}
+
+#stack.content-section > h2 {
+    margin: 0;
+
+    font-size: 34px;
+    letter-spacing: -.04em;
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .mobile-hero {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .mobile-hero-profile {
+        grid-template-columns: 70px minmax(0, 1fr);
+
+        gap: 14px;
+    }
+
+    .mobile-profile-photo {
+        width: 70px;
+        height: 70px;
+
+        border-radius: 20px;
+    }
+
+    .mobile-hero h1 {
+        font-size: 29px;
+    }
+
+    .mobile-expertise {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+
+    .mobile-expertise-card {
+        padding: 18px;
+    }
+
+    .automation-capabilities,
+    .data-source-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

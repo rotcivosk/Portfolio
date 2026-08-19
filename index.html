@@ -6,6 +6,11 @@
         <title>Victor Barboza do Monte</title>
         
         <link rel="stylesheet" href="style.css">
+        <link
+            rel="stylesheet"
+            href="mobile.css"
+            media="(max-width: 900px)"
+        >
 
         <!-- Bootstrap Icons -->
         <link
@@ -14,8 +19,8 @@
         >
     </head>
 
-    <body>
-        <main class="portfolio">
+    <body id="top">
+        <main class="portfolio desktop-home">
 
             <!-- GAME DEVELOPMENT -->
             <section class="area game-development">
@@ -450,6 +455,183 @@
         </main>
 
         
+
+        <!-- =========================================================
+             MOBILE HOME
+             A landing page própria para telas pequenas.
+             As seções detalhadas abaixo continuam compartilhadas.
+             ========================================================= -->
+        <main class="mobile-home" aria-label="Início do portfólio">
+
+            <section class="mobile-hero">
+
+                <div class="mobile-hero-topline">
+                    <span class="mobile-availability-dot"></span>
+                    <span>Software • Games • Data</span>
+                </div>
+
+                <div class="mobile-hero-profile">
+                    <img
+                        src="assets/foto.png"
+                        alt="Victor Barboza do Monte"
+                        class="mobile-profile-photo"
+                    >
+
+                    <div>
+                        <span class="mobile-eyebrow">PORTFÓLIO</span>
+                        <h1>Victor Barboza</h1>
+                        <p>Software Engineer • Game Developer</p>
+                    </div>
+                </div>
+
+                <p class="mobile-hero-intro">
+                    Desenvolvimento de software, jogos, pipelines de dados
+                    e automações com foco em sistemas que realmente precisam funcionar.
+                </p>
+
+                <a class="mobile-primary-action" href="#games">
+                    Explorar projetos
+                    <i class="bi bi-arrow-down"></i>
+                </a>
+
+            </section>
+
+
+            <section class="mobile-expertise">
+
+                <header class="mobile-section-heading">
+                    <span>ÁREAS</span>
+                    <h2>O que eu construo</h2>
+                </header>
+
+                <div class="mobile-expertise-grid">
+
+                    <a href="#games" class="mobile-expertise-card mobile-expertise-games">
+                        <div class="mobile-card-top">
+                            <span>01</span>
+                            <i class="bi bi-controller"></i>
+                        </div>
+
+                        <h3>Desenvolvimento de Jogos</h3>
+
+                        <p>
+                            Gameplay, sistemas, multiplayer,
+                            mobile e desenvolvimento 3D.
+                        </p>
+
+                        <div class="mobile-card-footer">
+                            <span>Unity • C#</span>
+                            <i class="bi bi-arrow-down-right"></i>
+                        </div>
+                    </a>
+
+
+                    <a href="#data" class="mobile-expertise-card mobile-expertise-data">
+                        <div class="mobile-card-top">
+                            <span>02</span>
+                            <i class="bi bi-database"></i>
+                        </div>
+
+                        <h3>Engenharia de Dados</h3>
+
+                        <p>
+                            Ingestão, validação, sincronização,
+                            pipelines e arquitetura de Data Lake.
+                        </p>
+
+                        <div class="mobile-card-footer">
+                            <span>Python • PostgreSQL</span>
+                            <i class="bi bi-arrow-down-right"></i>
+                        </div>
+                    </a>
+
+
+                    <a href="#automation" class="mobile-expertise-card mobile-expertise-automation">
+                        <div class="mobile-card-top">
+                            <span>03</span>
+                            <i class="bi bi-gear-wide-connected"></i>
+                        </div>
+
+                        <h3>Automação de Processos</h3>
+
+                        <p>
+                            Regras de negócio, integração entre sistemas
+                            e redução de tarefas manuais.
+                        </p>
+
+                        <div class="mobile-card-footer">
+                            <span>Python • VBA • APIs</span>
+                            <i class="bi bi-arrow-down-right"></i>
+                        </div>
+                    </a>
+
+
+                    <a href="#stack" class="mobile-expertise-card mobile-expertise-stack">
+                        <div class="mobile-card-top">
+                            <span>04</span>
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+
+                        <h3>Tech Stack</h3>
+
+                        <p>
+                            Ferramentas de desenvolvimento,
+                            backend, dados e infraestrutura.
+                        </p>
+
+                        <div class="mobile-card-footer">
+                            <span>Docker • Git • Linux</span>
+                            <i class="bi bi-arrow-down-right"></i>
+                        </div>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <section class="mobile-highlight-strip">
+
+                <span>Unity</span>
+                <span>Python</span>
+                <span>C#</span>
+                <span>PostgreSQL</span>
+                <span>Docker</span>
+                <span>Git</span>
+
+            </section>
+
+        </main>
+
+
+        <nav class="mobile-bottom-nav" aria-label="Navegação mobile">
+
+            <a href="#top" aria-label="Início">
+                <i class="bi bi-house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="#games" aria-label="Jogos">
+                <i class="bi bi-controller"></i>
+                <span>Jogos</span>
+            </a>
+
+            <a href="#data" aria-label="Dados">
+                <i class="bi bi-database"></i>
+                <span>Dados</span>
+            </a>
+
+            <a href="#automation" aria-label="Automação">
+                <i class="bi bi-gear"></i>
+                <span>Automação</span>
+            </a>
+
+            <a href="#stack" aria-label="Tecnologias">
+                <i class="bi bi-code-slash"></i>
+                <span>Stack</span>
+            </a>
+
+        </nav>
         <section id="games" class="content-section games-section">
 
             <header class="section-header">

@@ -865,13 +865,9 @@ body {
 
 /* RESPONSIVO */
 
-@media (max-width: 900px) {
 
-    .stack-grid {
-        grid-template-columns: 1fr;
-    }
+/* Responsive rules moved to mobile.css */
 
-}
 
 /* =========================
    PERFIL CENTRAL
@@ -1404,44 +1400,9 @@ body {
    RESPONSIVIDADE
    ========================= */
 
-@media (max-width: 900px) {
 
-    .games-section {
-        padding: 50px 24px;
-    }
+/* Responsive rules moved to mobile.css */
 
-
-    .game-project {
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-
-        margin-bottom: 70px;
-        padding-bottom: 70px;
-    }
-
-
-    .game-project-reverse .game-project-media,
-    .game-project-reverse .game-project-content {
-        order: initial;
-    }
-
-
-    .game-project-header {
-        flex-direction: column;
-    }
-
-
-    .project-technologies {
-        justify-content: flex-start;
-    }
-
-
-    .project-details {
-        grid-template-columns: 1fr;
-    }
-
-}
 /* =========================================================
    DATA ENGINEERING - DETAILED SECTION
    ========================================================= */
@@ -2168,111 +2129,14 @@ body {
    RESPONSIVE
    ========================= */
 
-@media (max-width: 1000px) {
 
-    .data-case {
-        grid-template-columns: 40px 1fr;
-    }
+/* Responsive rules moved to mobile.css */
 
 
-    .data-case-side {
-        grid-column: 2;
-
-        padding: 25px 0 0;
-
-        border-left: 0;
-        border-top: 1px solid #e3e9e7;
-    }
 
 
-    .data-pipeline-overview {
-        flex-direction: column;
-    }
+/* Responsive rules moved to mobile.css */
 
-
-    .data-pipeline-sources {
-        width: 100%;
-
-        flex: initial;
-
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-
-    .data-pipeline-arrow {
-        transform: rotate(90deg);
-    }
-
-}
-
-
-@media (max-width: 700px) {
-
-    .data-section {
-        padding: 60px 20px;
-    }
-
-
-    .data-case {
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-
-        padding: 25px;
-    }
-
-
-    .data-case-number {
-        display: none;
-    }
-
-
-    .data-case-side {
-        grid-column: auto;
-    }
-
-
-    .data-pipeline-sources,
-    .data-source-grid,
-    .infra-services {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-
-    .data-pipeline-processing {
-        width: 100%;
-
-        flex-direction: column;
-    }
-
-
-    .data-pipeline-processing > div {
-        width: 100%;
-    }
-
-
-    .data-pipeline-processing > i {
-        transform: rotate(90deg);
-    }
-
-
-    .validation-flow,
-    .lake-flow {
-        flex-wrap: wrap;
-    }
-
-
-    .validation-flow > i,
-    .lake-flow > i {
-        transform: rotate(90deg);
-    }
-
-
-    .game-project-header {
-        flex-direction: column;
-    }
-
-}
 
 /* Tech Stack */
 .stack-tags {
@@ -2942,130 +2806,22 @@ body {
    RESPONSIVE
    ========================= */
 
-@media (max-width: 1000px) {
 
-    .automation-case {
-        grid-template-columns: 40px 1fr;
-    }
+/* Responsive rules moved to mobile.css */
 
 
-    .automation-case-side {
-        grid-column: 2;
-
-        padding: 25px 0 0;
-
-        border-left: 0;
-        border-top: 1px solid #eee5df;
-    }
 
 
-    .automation-overview {
-        flex-wrap: wrap;
-    }
+/* Responsive rules moved to mobile.css */
 
-
-    .automation-capabilities {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-@media (max-width: 700px) {
-
-    .automation-section {
-        padding: 60px 20px;
-    }
-
-
-    .automation-case {
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-
-        padding: 25px;
-    }
-
-
-    .automation-case-number {
-        display: none;
-    }
-
-
-    .automation-case-side {
-        grid-column: auto;
-    }
-
-
-    .automation-overview {
-        flex-direction: column;
-    }
-
-
-    .automation-overview > i,
-    .procurement-flow > i,
-    .invoice-flow > i,
-    .workflow-visual > i {
-        transform: rotate(90deg);
-    }
-
-
-    .procurement-flow,
-    .invoice-flow,
-    .workflow-visual,
-    .report-flow {
-        flex-direction: column;
-    }
-
-
-    .automation-flow-node,
-    .workflow-stage,
-    .report-processing,
-    .report-output {
-        width: 100%;
-    }
-
-
-    .automation-capabilities {
-        grid-template-columns: 1fr;
-    }
-
-}
 
 /* =========================
    RESPONSIVIDADE
    ========================= */
 
-@media (max-width: 900px) {
 
-    .portfolio {
-        display: block;
-    }
+/* Responsive rules moved to mobile.css */
 
-    .area {
-        min-height: 500px;
-
-        padding: 32px 24px;
-
-        border-right: none;
-        border-bottom: 1px solid #d9dde5;
-    }
-
-    .profile {
-        position: relative;
-
-        top: auto;
-        left: auto;
-
-        transform: none;
-
-        margin: 40px auto;
-
-        width: min(300px, calc(100vw - 48px));
-        height: min(300px, calc(100vw - 48px));
-    }
-
-}
 
 /* =========================================================
    HOME REDESIGN - PORTFOLIO
@@ -3712,247 +3468,39 @@ body {
    MOBILE
    ========================= */
 
-@media (max-width: 900px) {
-    .portfolio {
-        display: block;
-        overflow: visible;
-    }
 
-    .area {
-        min-height: auto;
-        padding: 48px 24px;
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-    }
+/* Responsive rules moved to mobile.css */
 
-    .data-engineering .area-link,
-    .tech-stack .area-link {
-        text-align: left;
-        margin-left: 0;
-    }
 
-    .data-engineering .area-link h2::after,
-    .tech-stack .area-link h2::after {
-        margin-left: 0;
-    }
 
-    .profile {
-        position: relative;
-        top: auto;
-        left: auto;
-        width: 240px;
-        height: 240px;
-        margin: 38px auto;
-        transform: none;
-    }
+/* Responsive rules moved to mobile.css */
 
-    .game-card {
-        grid-template-columns: 42% 1fr;
-    }
-
-    .data-cards,
-    .automation-cards,
-    .stack-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .data-engineering .area-content,
-    .tech-stack .area-content {
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 560px) {
-    .game-thumbnails {
-        overflow-x: auto;
-        padding: 2px;
-    }
-
-    .game-card {
-        grid-template-columns: 1fr;
-    }
-
-    .game-card-image {
-        min-height: 210px;
-    }
-
-    #game-prev { left: -8px; }
-    #game-next { right: -8px; }
-}
 
 /* =========================================================
    MOBILE HOME
    ========================================================= */
 
-@media (max-width: 900px) {
 
-    .portfolio {
-        display: flex;
-        flex-direction: column;
-    }
+/* Responsive rules moved to mobile.css */
 
-    /* Perfil primeiro no mobile */
-    .profile {
-        order: -1;
-
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
-
-        width: 100%;
-        height: auto;
-
-        margin: 0;
-        padding: 45px 24px 35px;
-
-        border-radius: 0;
-        border: none;
-        border-bottom: 1px solid #e4e7ec;
-
-        box-shadow: none;
-    }
-
-    .profile-photo {
-        width: 100px;
-        height: 100px;
-    }
-
-    .profile h1 {
-        font-size: 26px;
-        margin-top: 15px;
-    }
-
-    .profile p {
-        font-size: 13px;
-    }
-
-
-    /* Quadrantes */
-    .area {
-        width: 100%;
-        min-height: auto;
-
-        padding: 45px 24px;
-
-        border-right: none;
-        border-bottom: 1px solid #e4e7ec;
-    }
-
-    .area h2 {
-        font-size: 26px;
-    }
-
-    .area p {
-        font-size: 14px;
-        margin-bottom: 25px;
-    }
-
-    /* No mobile não precisa alinhar à direita */
-    .data-engineering .area-link,
-    .tech-stack .area-link {
-        text-align: left;
-    }
-
-
-    /* =====================================================
-       GAMES
-       ===================================================== */
-
-    .game-thumbnails {
-        grid-template-columns: repeat(4, 1fr);
-
-        max-width: 100%;
-        gap: 6px;
-    }
-
-    .game-thumbnail {
-        height: 52px;
-    }
-
-    .game-carousel {
-        max-width: 100%;
-    }
-
-    .game-card {
-        grid-template-columns: 1fr;
-    }
-
-    .game-card-image {
-        height: auto;
-        aspect-ratio: 16 / 9;
-    }
-
-    .game-card-content {
-        padding: 18px;
-    }
-
-    .carousel-button {
-        width: 36px;
-        height: 36px;
-
-        font-size: 20px;
-    }
-
-    #game-prev {
-        left: 8px;
-    }
-
-    #game-next {
-        right: 8px;
-    }
-
-
-    /* =====================================================
-       DATA ENGINEERING HOME
-       ===================================================== */
-
-    .data-cards {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* =====================================================
-       PROCESS AUTOMATION HOME
-       ===================================================== */
-
-    .automation-cards {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* =====================================================
-       TECH STACK HOME
-       ===================================================== */
-
-    .stack-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
 
 
 /* =========================================================
    CELULARES PEQUENOS
    ========================================================= */
 
-@media (max-width: 600px) {
 
-    .area {
-        padding: 40px 18px;
-    }
+/* Responsive rules moved to mobile.css */
+/* =========================================================
+   RESPONSIVE ENTRY POINT
+   Mobile has its own presentation in mobile.css
+   ========================================================= */
 
-    .area h2 {
-        font-size: 23px;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    .game-thumbnails {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .content-section {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
+.mobile-home,
+.mobile-bottom-nav {
+    display: none;
 }
